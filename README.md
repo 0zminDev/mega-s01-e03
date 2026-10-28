@@ -13,8 +13,8 @@ unresolved; they are not added a second time. There are 427 export rows but 412 
 
 ## Deliverables
 
-- [Signed KB source](4471-review.svx)
-- [Rendered KB page](4471-review.html)
+- [Signed KB source](https://github.com/0zminDev/mega-s01-e03/blob/main/4471-review.svx)
+- [Rendered KB page](https://github.com/0zminDev/mega-s01-e03/blob/main/4471-review.html)
 - [Original incident, archived render](support-kb/4471-original.html)
 - [Original triage rule and counterexamples, rendered](rendered/kb/triage/dedupe/index.html)
 
