@@ -15,6 +15,7 @@ unresolved; they are not added a second time. There are 427 export rows but 412 
 
 - [Signed KB source](https://github.com/0zminDev/mega-s01-e03/blob/main/src/routes/kb/incidents/4471/postmortem/+page.svx)
 - [Rendered KB page](https://github.com/0zminDev/mega-s01-e03/blob/main/rendered/kb/incidents/4471/postmortem/index.html)
+- [Full-page browser capture](https://github.com/0zminDev/mega-s01-e03/blob/main/rendered/kb/incidents/4471/postmortem/page.png)
 - [Original incident, rendered](rendered/kb/incidents/4471/index.html)
 - [Original triage rule and counterexamples, rendered](rendered/kb/triage/dedupe/index.html)
 
@@ -45,6 +46,7 @@ Use Node.js 22.18+ with TypeScript stripping, or Node.js 24+.
 npm ci
 npm test
 npm run build
+npm run capture
 ```
 
 The build compiles the original `.svx` pages and Svelte components through mdsvex and Vite,
@@ -54,5 +56,7 @@ The source is `src/routes/kb/incidents/4471/postmortem/+page.svx`; its render is
 The committed HTML is a static snapshot; explorer controls are not hydrated.
 Open the HTML directly, or serve `rendered` with a local static server to follow
 the KB's absolute links.
+The capture command uses an isolated headless instance of installed Google Chrome and saves
+a full-page PNG; it does not access the signed-in browser profile.
 
 Original export: `kb-export-267efc5e.zip`, downloaded from the signed-in challenge page.
