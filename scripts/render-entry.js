@@ -14,8 +14,8 @@ for (const [source, page] of Object.entries(pages)) {
   await mkdir(dirname(output), { recursive: true });
   await writeFile(output, html);
   console.log(output);
-  if (route === 'kb/decisions/0002-triage-by-cause') {
-    await copyFile(source.slice(1), 'kb.svx');
-    await writeFile('kb.html', html);
+  if (route === 'kb/incidents/4471-review') {
+    await copyFile(source.slice(1), '4471-review.svx');
+    await writeFile('4471-review.html', html);
   }
 }

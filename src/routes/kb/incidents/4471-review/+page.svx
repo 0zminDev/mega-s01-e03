@@ -1,6 +1,6 @@
 ---
 layout: runbook
-title: '0002 · Split #4471 by cause, not subject'
+title: '#4471 review · Split by cause, not subject'
 owner: 0zminDev / GitHub Copilot
 status: proposed
 reviewed: '2026-10-28'
