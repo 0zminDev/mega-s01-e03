@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { copyFile, mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { render } from 'svelte/server';
 
@@ -14,4 +14,8 @@ for (const [source, page] of Object.entries(pages)) {
   await mkdir(dirname(output), { recursive: true });
   await writeFile(output, html);
   console.log(output);
+  if (route === 'kb/decisions/0002-triage-by-cause') {
+    await copyFile(source.slice(1), 'kb.svx');
+    await writeFile('kb.html', html);
+  }
 }

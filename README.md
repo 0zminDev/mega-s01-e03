@@ -13,8 +13,8 @@ unresolved; they are not added a second time. There are 427 export rows but 412 
 
 ## Deliverables
 
-- [Signed KB source](src/routes/kb/decisions/0002-triage-by-cause/+page.svx)
-- [Rendered KB page](rendered/kb/decisions/0002-triage-by-cause/index.html)
+- [Signed KB source](kb.svx)
+- [Rendered KB page](kb.html)
 - [Original incident, rendered](rendered/kb/incidents/4471/index.html)
 - [Original triage rule and counterexamples, rendered](rendered/kb/triage/dedupe/index.html)
 
@@ -47,6 +47,8 @@ npm run build
 
 The build compiles the original `.svx` pages and Svelte components through mdsvex and Vite,
 then renders them with `svelte/server`. HTML includes component styles and computed values.
+It exports the new page as root-level `kb.svx` and `kb.html` for course discovery; edit
+`src/routes/kb/decisions/0002-triage-by-cause/+page.svx`, not the generated copy.
 The committed HTML is a static snapshot; explorer controls are not hydrated.
 Open the HTML directly, or serve `rendered` with a local static server to follow
 the KB's absolute links.
