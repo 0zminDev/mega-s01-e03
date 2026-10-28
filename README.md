@@ -13,9 +13,9 @@ unresolved; they are not added a second time. There are 427 export rows but 412 
 
 ## Deliverables
 
-- [Signed KB source](https://github.com/0zminDev/mega-s01-e03/blob/main/src/routes/kb/incidents/4471/+page.svx)
-- [Rendered KB page](https://github.com/0zminDev/mega-s01-e03/blob/main/rendered/kb/incidents/4471/index.html)
-- [Original incident, archived render](support-kb/4471-original.html)
+- [Signed KB source](https://github.com/0zminDev/mega-s01-e03/blob/main/src/routes/kb/incidents/4471/postmortem/+page.svx)
+- [Rendered KB page](https://github.com/0zminDev/mega-s01-e03/blob/main/rendered/kb/incidents/4471/postmortem/index.html)
+- [Original incident, rendered](rendered/kb/incidents/4471/index.html)
 - [Original triage rule and counterexamples, rendered](rendered/kb/triage/dedupe/index.html)
 
 The new page includes the computed cause table, received-versus-merged timeline, an audit of
@@ -23,8 +23,8 @@ overlapping export rows, all five unresolved symptom accounts, and the subject-m
 counterexamples. Its rendered signature is **DR-KG5V-QX8H**, computed by the supplied
 RenderStamp component, not typed into the page.
 
-The accepted historical decision is unchanged. The original incident is archived unchanged
-in `support-kb/4471-original.svx`; the signed review now occupies the canonical incident route.
+The accepted historical decision and original incident are unchanged.
+The signed postmortem is a new subpage of the incident, not a replacement for the original.
 The incident page records the closed outcomes and separately recommends a new triage rule;
 it does not pretend the desk has already adopted that recommendation.
 The export is a snapshot, not a live connection. Refresh the data before operational closure.
@@ -49,8 +49,8 @@ npm run build
 
 The build compiles the original `.svx` pages and Svelte components through mdsvex and Vite,
 then renders them with `svelte/server`. HTML includes component styles and computed values.
-The source is `src/routes/kb/incidents/4471/+page.svx`; its render is
-`rendered/kb/incidents/4471/index.html`. There is only one signed source and one stamped render.
+The source is `src/routes/kb/incidents/4471/postmortem/+page.svx`; its render is
+`rendered/kb/incidents/4471/postmortem/index.html`. There is only one signed source and one stamped render.
 The committed HTML is a static snapshot; explorer controls are not hydrated.
 Open the HTML directly, or serve `rendered` with a local static server to follow
 the KB's absolute links.
