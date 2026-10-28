@@ -1,4 +1,4 @@
-import { copyFile, mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { render } from 'svelte/server';
 
@@ -14,8 +14,4 @@ for (const [source, page] of Object.entries(pages)) {
   await mkdir(dirname(output), { recursive: true });
   await writeFile(output, html);
   console.log(output);
-  if (route === 'kb/incidents/4471') {
-    await copyFile(source.slice(1), '4471-review.svx');
-    await writeFile('4471-review.html', html);
-  }
 }

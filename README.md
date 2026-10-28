@@ -13,8 +13,8 @@ unresolved; they are not added a second time. There are 427 export rows but 412 
 
 ## Deliverables
 
-- [Signed KB source](https://github.com/0zminDev/mega-s01-e03/blob/main/4471-review.svx)
-- [Rendered KB page](https://github.com/0zminDev/mega-s01-e03/blob/main/4471-review.html)
+- [Signed KB source](https://github.com/0zminDev/mega-s01-e03/blob/main/src/routes/kb/incidents/4471/+page.svx)
+- [Rendered KB page](https://github.com/0zminDev/mega-s01-e03/blob/main/rendered/kb/incidents/4471/index.html)
 - [Original incident, archived render](support-kb/4471-original.html)
 - [Original triage rule and counterexamples, rendered](rendered/kb/triage/dedupe/index.html)
 
@@ -49,8 +49,8 @@ npm run build
 
 The build compiles the original `.svx` pages and Svelte components through mdsvex and Vite,
 then renders them with `svelte/server`. HTML includes component styles and computed values.
-It exports the new page as root-level `4471-review.svx` and `4471-review.html` for course discovery;
-edit `src/routes/kb/incidents/4471/+page.svx`, not the generated copy.
+The source is `src/routes/kb/incidents/4471/+page.svx`; its render is
+`rendered/kb/incidents/4471/index.html`. There is only one signed source and one stamped render.
 The committed HTML is a static snapshot; explorer controls are not hydrated.
 Open the HTML directly, or serve `rendered` with a local static server to follow
 the KB's absolute links.
