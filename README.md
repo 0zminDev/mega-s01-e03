@@ -13,10 +13,10 @@ unresolved; they are not added a second time. There are 427 export rows but 412 
 
 ## Deliverables
 
-- [Signed KB source](support-kb/src/routes/kb/decisions/0002-triage-by-cause/+page.svx)
-- [Rendered KB page](support-kb/rendered/kb/decisions/0002-triage-by-cause/index.html)
-- [Original incident, rendered](support-kb/rendered/kb/incidents/4471/index.html)
-- [Original triage rule and counterexamples, rendered](support-kb/rendered/kb/triage/dedupe/index.html)
+- [Signed KB source](src/routes/kb/decisions/0002-triage-by-cause/+page.svx)
+- [Rendered KB page](rendered/kb/decisions/0002-triage-by-cause/index.html)
+- [Original incident, rendered](rendered/kb/incidents/4471/index.html)
+- [Original triage rule and counterexamples, rendered](rendered/kb/triage/dedupe/index.html)
 
 The new page includes the computed cause table, received-versus-merged timeline, an audit of
 overlapping export rows, all five unresolved symptom accounts, and the subject-matching
@@ -40,7 +40,6 @@ disposition, not independent production verification of the five anomalous repor
 Use Node.js 22.18+ with TypeScript stripping, or Node.js 24+.
 
 ```sh
-cd support-kb
 npm ci
 npm test
 npm run build
@@ -49,7 +48,7 @@ npm run build
 The build compiles the original `.svx` pages and Svelte components through mdsvex and Vite,
 then renders them with `svelte/server`. HTML includes component styles and computed values.
 The committed HTML is a static snapshot; explorer controls are not hydrated.
-Open the HTML directly, or serve `support-kb/rendered` with a local static server to follow
+Open the HTML directly, or serve `rendered` with a local static server to follow
 the KB's absolute links.
 
 Original export: `kb-export-267efc5e.zip`, downloaded from the signed-in challenge page.
