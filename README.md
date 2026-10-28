@@ -27,6 +27,14 @@ The accepted historical decision and all other original export files are unchang
 Decision 0002 proposes a replacement; it does not pretend the desk has already adopted it.
 The export is a snapshot, not a live connection. Refresh the data before operational closure.
 
+## Subsequent engineering update
+
+After accepting the tickets, the course page reported `#4471 · closed 05 oct`:
+parser **FIXED** (`fix(dates): parse dd/mm for eu locales`); hint **WON'T FIX**
+(`booking-v3 form retired`). Issue 1 is closed as completed; issue 2 is closed as not planned.
+Retiring the affected form is not the same as repairing its hint. This is the desk's
+disposition, not independent production verification of the five anomalous reports.
+
 ## Reproduce the rendered pages
 
 Use Node.js 22.18+ with TypeScript stripping, or Node.js 24+.

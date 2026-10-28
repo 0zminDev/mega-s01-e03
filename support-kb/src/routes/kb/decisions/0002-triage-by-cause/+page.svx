@@ -30,6 +30,26 @@ This review uses the **2026-10-04 export**, not a live ticket-system connection.
 continues working. Counts and issue descriptions are a snapshot, not a claim that nothing
 has arrived or changed since then. Obtain a fresh export and rerun before operational closure.
 
+## Current disposition: course engineering update
+
+After the course accepted the two tickets, its
+[challenge page](https://hq.mega.dev/challenges/what-it-shows) published this update:
+
+> #4471 · closed 05 oct
+>
+> parser — FIXED — fix(dates): parse dd/mm for eu locales
+>
+> hint — WON'T FIX — booking-v3 form retired
+
+Close [issue 1](https://github.com/0zminDev/mega-s01-e03/issues/1) as **completed** on the
+desk's report of the parser fix. Close
+[issue 2](https://github.com/0zminDev/mega-s01-e03/issues/2) as **not planned** because the
+affected form was retired, not because its hint was repaired. These dispositions come from
+the current course update; the export below still describes the earlier state.
+
+The update does not establish that each of the flagged one-day/chronology reports was
+reproduced or fixed. Preserve those uncertainties instead of claiming verification we do not have.
+
 ## Problems and tickets
 
 - [Parser problem: GitHub issue 1](https://github.com/0zminDev/mega-s01-e03/issues/1).
