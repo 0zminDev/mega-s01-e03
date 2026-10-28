@@ -13,6 +13,7 @@ unresolved; they are not added a second time. There are 427 export rows but 412 
 
 ## Deliverables
 
+- [Published KB page](https://0zmindev.github.io/mega-s01-e03/kb/incidents/4471/postmortem/)
 - [Signed KB source](https://github.com/0zminDev/mega-s01-e03/blob/main/src/routes/kb/incidents/4471/postmortem/+page.svx)
 - [Rendered KB page](https://github.com/0zminDev/mega-s01-e03/blob/main/rendered/kb/incidents/4471/postmortem/index.html)
 - [Full-page browser capture](https://github.com/0zminDev/mega-s01-e03/blob/main/rendered/kb/incidents/4471/postmortem/page.png)
@@ -54,8 +55,9 @@ then renders them with `svelte/server`. HTML includes component styles and compu
 The source is `src/routes/kb/incidents/4471/postmortem/+page.svx`; its render is
 `rendered/kb/incidents/4471/postmortem/index.html`. There is only one signed source and one stamped render.
 The committed HTML is a static snapshot; explorer controls are not hydrated.
-Open the HTML directly, or serve `rendered` with a local static server to follow
-the KB's absolute links.
+Links between KB pages are relative, so the same output works under the GitHub Pages
+repository path or a local static server. GitHub Pages serves the `gh-pages` branch,
+which contains the committed `rendered` tree.
 The capture command uses an isolated headless instance of installed Google Chrome and saves
 a full-page PNG; it does not access the signed-in browser profile.
 
