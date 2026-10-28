@@ -15,7 +15,7 @@ unresolved; they are not added a second time. There are 427 export rows but 412 
 
 - [Signed KB source](4471-review.svx)
 - [Rendered KB page](4471-review.html)
-- [Original incident, rendered](rendered/kb/incidents/4471/index.html)
+- [Original incident, archived render](support-kb/4471-original.html)
 - [Original triage rule and counterexamples, rendered](rendered/kb/triage/dedupe/index.html)
 
 The new page includes the computed cause table, received-versus-merged timeline, an audit of
@@ -23,7 +23,8 @@ overlapping export rows, all five unresolved symptom accounts, and the subject-m
 counterexamples. Its rendered signature is **DR-KG5V-QX8H**, computed by the supplied
 RenderStamp component, not typed into the page.
 
-The accepted historical decision and all other original export files are unchanged.
+The accepted historical decision is unchanged. The original incident is archived unchanged
+in `support-kb/4471-original.svx`; the signed review now occupies the canonical incident route.
 The incident review proposes a replacement rule; it does not pretend the desk has already adopted it.
 The export is a snapshot, not a live connection. Refresh the data before operational closure.
 
@@ -48,7 +49,7 @@ npm run build
 The build compiles the original `.svx` pages and Svelte components through mdsvex and Vite,
 then renders them with `svelte/server`. HTML includes component styles and computed values.
 It exports the new page as root-level `4471-review.svx` and `4471-review.html` for course discovery;
-edit `src/routes/kb/incidents/4471-review/+page.svx`, not the generated copy.
+edit `src/routes/kb/incidents/4471/+page.svx`, not the generated copy.
 The committed HTML is a static snapshot; explorer controls are not hydrated.
 Open the HTML directly, or serve `rendered` with a local static server to follow
 the KB's absolute links.

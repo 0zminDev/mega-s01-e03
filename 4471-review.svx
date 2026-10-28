@@ -21,7 +21,8 @@ Replace subject-only merging with cause-based triage. This record proposes a rep
 [accepted decision 0001](/kb/decisions/0001-dedupe-by-subject); that historical record remains
 unchanged. The desk must adopt this replacement before treating it as its accepted policy.
 
-The [incident narrative](/kb/incidents/4471) says one known parser issue and one queued fix.
+The [archived incident narrative](https://github.com/0zminDev/mega-s01-e03/blob/main/support-kb/4471-original.svx)
+says one known parser issue and one queued fix.
 Its rendered components disagree: the merged reports include a separate booking-form hint
 problem without a ticket of its own. The old [triage page](/kb/triage/dedupe) is stale, and
 its own explorer contradicts its subject-only rule.
