@@ -1,8 +1,8 @@
 ---
 layout: runbook
-title: '#4471 review · Split by cause, not subject'
+title: '#4471 postmortem · Parser fixed; booking-v3 retired'
 owner: 0zminDev / GitHub Copilot
-status: proposed
+status: closed
 reviewed: '2026-10-28'
 signature: 'GitHub Copilot (gpt-6.1-sol), for 0zminDev'
 ---
@@ -15,11 +15,7 @@ signature: 'GitHub Copilot (gpt-6.1-sol), for 0zminDev'
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
 </script>
 
-## Decision and scope
-
-Replace subject-only merging with cause-based triage. This record proposes a replacement for
-[accepted decision 0001](/kb/decisions/0001-dedupe-by-subject); that historical record remains
-unchanged. The desk must adopt this replacement before treating it as its accepted policy.
+## What happened
 
 The [archived incident narrative](https://github.com/0zminDev/mega-s01-e03/blob/main/support-kb/4471-original.svx)
 says one known parser issue and one queued fix.
@@ -27,9 +23,9 @@ Its rendered components disagree: the merged reports include a separate booking-
 problem without a ticket of its own. The old [triage page](/kb/triage/dedupe) is stale, and
 its own explorer contradicts its subject-only rule.
 
-This review uses the **2026-10-04 export**, not a live ticket-system connection. The desk
-continues working. Counts and issue descriptions are a snapshot, not a claim that nothing
-has arrived or changed since then. Obtain a fresh export and rerun before operational closure.
+This postmortem uses the **2026-10-04 export** for report counts and the subsequent course
+engineering update for closure. The desk continued working while the review ran. Refreshing
+the export returned identical data, so it remains a historical snapshot, not a live view.
 
 ## Current disposition: course engineering update
 
@@ -42,9 +38,9 @@ After the course accepted the two tickets, its
 >
 > hint — WON'T FIX — booking-v3 form retired
 
-Close [issue 1](https://github.com/0zminDev/mega-s01-e03/issues/1) as **completed** on the
-desk's report of the parser fix. Close
-[issue 2](https://github.com/0zminDev/mega-s01-e03/issues/2) as **not planned** because the
+[Issue 1](https://github.com/0zminDev/mega-s01-e03/issues/1) is closed as **completed** on the
+desk's report of the parser fix.
+[Issue 2](https://github.com/0zminDev/mega-s01-e03/issues/2) is closed as **not planned** because the
 affected form was retired, not because its hint was repaired. These dispositions come from
 the current course update; the export below still describes the earlier state.
 
@@ -54,12 +50,12 @@ reproduced or fixed. Preserve those uncertainties instead of claiming verificati
 ## Problems and tickets
 
 - [Parser problem: GitHub issue 1](https://github.com/0zminDev/mega-s01-e03/issues/1).
-  The shared parser assumes month first for day-first tenants. Fix the explicit parsing
-  contract and test calendar-invite round trips.
+  The shared parser assumed month first for day-first tenants. Engineering reports that
+  day-first parsing was fixed.
 - [Form hint problem: GitHub issue 2](https://github.com/0zminDev/mega-s01-e03/issues/2).
   For day-first tenants on booking-v3, the form prints `MM/DD/YYYY` but reads the tenant's
-  day-first order. Make its visible hint agree with its parser. A shared-parser fix alone
-  does not repair this form contract.
+  day-first order. Engineering retired that form rather than repairing its hint.
+  A shared-parser fix alone does not repair this form contract.
 
 The following table computes the reports covered by each problem from unique report IDs.
 Its final column describes the **original desk ticket**, not the new GitHub issues above.
@@ -85,6 +81,10 @@ The monthly audit below and the weekly chart both deduplicate report IDs.
 <ReportFlow ticket={4471} />
 
 ## How to triage the next report
+
+The recommendation is to replace subject-only merging with cause-based triage.
+[Accepted decision 0001](/kb/decisions/0001-dedupe-by-subject) remains unchanged as historical
+evidence. The desk must accept a new decision record before adopting this recommendation as policy.
 
 1. Read the report and preserve the original input, expected day and actual day.
 2. Resolve the tenant's configured locale and form version; browser locale and intake tags

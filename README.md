@@ -25,7 +25,8 @@ RenderStamp component, not typed into the page.
 
 The accepted historical decision is unchanged. The original incident is archived unchanged
 in `support-kb/4471-original.svx`; the signed review now occupies the canonical incident route.
-The incident review proposes a replacement rule; it does not pretend the desk has already adopted it.
+The incident page records the closed outcomes and separately recommends a new triage rule;
+it does not pretend the desk has already adopted that recommendation.
 The export is a snapshot, not a live connection. Refresh the data before operational closure.
 
 ## Subsequent engineering update
