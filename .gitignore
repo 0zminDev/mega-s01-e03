@@ -1,3 +1,4 @@
 node_modules/
 .render/
+.challenge/
 .DS_Store

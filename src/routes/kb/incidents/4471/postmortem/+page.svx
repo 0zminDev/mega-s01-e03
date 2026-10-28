@@ -4,7 +4,7 @@ title: '#4471 postmortem · Parser fixed; booking-v3 retired'
 owner: 0zminDev / GitHub Copilot
 status: closed
 reviewed: '2026-10-28'
-signature: 0zminDev
+signature: 'v1.eyJzdWIiOiIyNTIxIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMxODA4NTksImV4cCI6MTc5MzI2NzI1OX0.tFRaHEDQVzrYHU10n2r37qUvvQ5-1vY1gfuSfyA6ANU'
 ---
 
 <script>

@@ -13,17 +13,23 @@ unresolved; they are not added a second time. There are 427 export rows but 412 
 
 ## Deliverables
 
+- [Signed KB source: kb.svx](kb.svx)
+- [Standalone rendered page: kb.html](kb.html)
 - [Published KB page](https://0zmindev.github.io/mega-s01-e03/kb/incidents/4471/postmortem/)
-- [Signed KB source](https://github.com/0zminDev/mega-s01-e03/blob/main/src/routes/kb/incidents/4471/postmortem/+page.svx)
-- [Rendered KB page](https://github.com/0zminDev/mega-s01-e03/blob/main/rendered/kb/incidents/4471/postmortem/index.html)
+- [Canonical KB route source](https://github.com/0zminDev/mega-s01-e03/blob/main/src/routes/kb/incidents/4471/postmortem/+page.svx)
+- [Rendered KB route](https://github.com/0zminDev/mega-s01-e03/blob/main/rendered/kb/incidents/4471/postmortem/index.html)
 - [Full-page browser capture](https://github.com/0zminDev/mega-s01-e03/blob/main/rendered/kb/incidents/4471/postmortem/page.png)
 - [Original incident, rendered](rendered/kb/incidents/4471/index.html)
 - [Original triage rule and counterexamples, rendered](rendered/kb/triage/dedupe/index.html)
 
 The new page includes the computed cause table, received-versus-merged timeline, an audit of
 overlapping export rows, all five unresolved symptom accounts, and the subject-matching
-counterexamples. Its rendered signature is **DR-512C-406C**, computed by the supplied
+counterexamples. Its rendered desk reference is **DR-99C4-KFR3**, computed by the supplied
 RenderStamp component, not typed into the page.
+
+The frontmatter `signature` is the exact `ticket` issued by the course's `start-challenge`
+tool. An author handle is not a substitute for that proof. Local proof storage and the
+masked course log are ignored by Git.
 
 The accepted historical decision and original incident are unchanged.
 The signed postmortem is a new subpage of the incident, not a replacement for the original.
@@ -53,7 +59,9 @@ npm run capture
 The build compiles the original `.svx` pages and Svelte components through mdsvex and Vite,
 then renders them with `svelte/server`. HTML includes component styles and computed values.
 The source is `src/routes/kb/incidents/4471/postmortem/+page.svx`; its render is
-`rendered/kb/incidents/4471/postmortem/index.html`. There is only one signed source and one stamped render.
+`rendered/kb/incidents/4471/postmortem/index.html`. The same build exports the canonical
+source as root-level `kb.svx` and its actual render as `kb.html`, with CSS inlined and links
+to the committed rendered pages. These are delivery copies of the same signed page.
 The committed HTML is a static snapshot; explorer controls are not hydrated.
 Links between KB pages are relative, so the same output works under the GitHub Pages
 repository path or a local static server. GitHub Pages serves the `gh-pages` branch,
