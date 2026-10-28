@@ -21,7 +21,7 @@ unresolved; they are not added a second time. There are 427 export rows but 412 
 
 The new page includes the computed cause table, received-versus-merged timeline, an audit of
 overlapping export rows, all five unresolved symptom accounts, and the subject-matching
-counterexamples. Its rendered signature is **DR-KG5V-QX8H**, computed by the supplied
+counterexamples. Its rendered signature is **DR-512C-406C**, computed by the supplied
 RenderStamp component, not typed into the page.
 
 The accepted historical decision and original incident are unchanged.
